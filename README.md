@@ -43,16 +43,3 @@ python project_pipeline.py
 ```
 ## Modelo Final y Resultados del entrenamiento
 
-<!-- TODO: Actualizar el resultado final del proyecto -->
-
-El modelo final es un `CatBoost` optimizado. Las siguientes fueron las metricas obtenidas:
-
-<img width="2000" height="600" alt="model_evaluation" src="https://github.com/user-attachments/assets/b04abc7e-df73-4eb1-86f3-289b0153e37a" />
-
-|        |train|test|
-|--------------|-----|----|
-|F1 Score      |0.63 |0.59|
-|Accuracy Score|0.82 |0.81|
-|Recall Score  |0.57 |0.54|
-|APS           |0.72 |0.65|
-|ROC AUC       |0.87 |0.84|
