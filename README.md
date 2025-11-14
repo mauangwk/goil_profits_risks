@@ -12,7 +12,7 @@ Para la compañía petrolera GiantOil se necesita lograr una selección de una r
 El repositorio está organizado de la siguiente manera:
 
 - **/datasets**: Contiene los datos brutos (`raw`) y los datos listos para ser procesados para la creacion del modelo(`pre-processed`).
-- **/files/documentation**: Almacena la estructura/modelo de datos y notebooks de Jupyter para análisis exploratorio o referencias del proyecto en un bootcamp en tripleten.
+- **/files/documentation**: Almacena la estructura/modelo de datos y notebooks de Jupyter para análisis exploratorio.
 - **/files/outputs**: Guarda los resultados del proyecto, como el modelo entrenado (`models`), imagenes (`images`)
 - **/src**: Contiene el código fuente modularizado en scripts de Python.
 - **`requirements.txt`**: Lista de dependencias del proyecto.
@@ -41,5 +41,33 @@ Para la ejecucion del pipeline, es suficiente con la siguiente linea en raiz del
 python project_pipeline.py 
 
 ```
-## Modelo Final y Resultados del entrenamiento
+## Resultados durante el proyecto
 
+En relacion al entrenamiento de un modelo de datos utilizando un modelo simple de regresion lineal, se generaron los siguientes indicadores:
+
+* Region 0
+- RMSE: 37.58 y R2: 0.28
+
+* Region 1
+- RMSE: 00.89 y R2: 1.00
+
+* Region 2
+- RMSE: 39.96 y R2: 0.20
+
+Para todas, son mejores resultados que la media como prueba de cordura.
+
+De lo anterior resulta tener mejor desempeño para los datos de la region 0.
+
+Los resultados y los datos asociados a la region 1 resultan ser muy dudosos dado el coeficiente de determinacion = 1 obtenido.
+
+El producto promedio de cada Region así como el beneficio calculado para los mejores 200 pozos:
+
+* Producto
+R0 = 92.50, R1 = 68.825, R3 = 95.00
+
+* Beneficio para cada region:
+R0 = 66350365.68, 
+R1 = 24150866.97, 
+R2 = 70596329.28
+
+En un principio dado el beneficio generado por las regiones, se podría pensar que la Region 2 debería considerarse para elegir los 200 pozos, sin embargo dado pruebas utilizando la tecnica de bootstrapping dejó ver que el margen de ganancias crece sobre la region 1 donde se puede asumir que el modelo con mejores resultados actua.
