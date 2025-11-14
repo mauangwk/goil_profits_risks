@@ -32,4 +32,7 @@ if params.preprocess_required:
 if params.training_required:
     os.system(f"python{extension_binarios} src/02_create_model.py")
 
+if not (params.preprocess_required and params.training_required):
+    print("Por favor revisar el documento documentation/project.ipynb")
+
 print("\nproceso terminado...")

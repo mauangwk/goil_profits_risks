@@ -22,9 +22,8 @@ El repositorio está organizado de la siguiente manera:
 Por favor considerar el ejecutar las siguientes instrucciones para manejar el workspace dentro de un ambiente virtual:
 
 ```
-mkdir venv
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 user$ pip install --upgrade pip
 user$ python -m pip install -r requirements.txt
 ```
